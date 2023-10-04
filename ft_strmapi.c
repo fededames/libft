@@ -6,10 +6,9 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 22:12:05 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/01 14:21:39 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:50:29 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 #include <stdlib.h>
@@ -35,7 +34,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[len] = '\0';
 	return (str);
 }
-
-
-
-

@@ -6,7 +6,7 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 21:22:20 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/09/23 21:22:27 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:54:28 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ char
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char*)(s + i));
+		{
+			return ((char *)(s + i));
+		}
 		i--;
 	}
 	return (NULL);

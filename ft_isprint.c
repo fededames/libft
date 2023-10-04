@@ -6,13 +6,13 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 19:29:21 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/09/17 19:29:30 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:50:55 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

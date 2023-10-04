@@ -6,14 +6,13 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 14:27:56 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/01 14:35:43 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/04 19:56:27 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_putendl_fd(char const *s, int fd)
 {
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);

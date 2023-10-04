@@ -6,22 +6,26 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 23:58:52 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/09/28 00:01:30 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/04 20:45:20 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-
-void		*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char	*tmp;
+	char	*srcc;
+	char	*dstc;
+	size_t	i;
 
-	tmp = (char *)malloc(sizeof(char) * len);
-	if (tmp == NULL)
-		return (NULL);
-	ft_memcpy(tmp, src, len);
-	ft_memcpy(dst, tmp, len);
-	free(tmp);
+	i = -1;
+	srcc = (char *)src;
+	dstc = (char *)dst;
+	if (srcc < dstc)
+		while ((int)(--len) >= 0)
+			*(dstc + len) = *(srcc + len);
+	else
+		while (++i < len)
+			*(dstc + i) = *(srcc + i);
 	return (dst);
 }

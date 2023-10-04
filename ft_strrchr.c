@@ -6,14 +6,13 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 23:33:42 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/09/27 23:34:55 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/04 18:53:02 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-char		*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 
