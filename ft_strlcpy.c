@@ -6,10 +6,9 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 00:01:28 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/09/22 00:04:40 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/01 20:27:47 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 
@@ -25,3 +24,4 @@ char	*ft_strlcpy(char *dst, const char *src)
 	}
 	dst[i] = '\0';
 	return (dst);
+}

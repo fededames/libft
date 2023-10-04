@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/19 22:43:21 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/01 20:35:26 by fdamian-         ###   ########.fr       */
+/*   Created: 2023/10/01 14:37:10 by fdamian-          #+#    #+#             */
+/*   Updated: 2023/10/01 20:40:31 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, int c, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	char	*d;
-	char	*s;
+	long int	n2;
 
-	i = 0;
-	d = (char *)dst;
-	s = (char *)src;
-
-	while (i < n)
+	n2 = n;
+	if (n2 < 0)
 	{
-		d[i] = s[i];
-		i++;
+		n2 = (n2 * -1);
+		write(fd, "-", 1);
 	}
-	return (dst);
+	if (n2 > 9)
+	{
+		ft_putnbr_fd(n2 / 10, fd);
+		ft_putchar_fd((n2 % 10) + '0', fd);
+	}
+	else
+		ft_putchar_fd(n2 + '0', fd);
 }
