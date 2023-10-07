@@ -6,7 +6,7 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/27 23:33:42 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/04 18:53:02 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/07 16:08:16 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	int			i;
+	const char	*ini;
 
+	ini = s;
 	i = ft_strlen(s);
-	if (c == 0)
-		return ((char *)s + i);
-	while (i >= 0)
-	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i--;
-	}
-	return (NULL);
+	s = (s + i);
+	while (*s != *ini && c != *s)
+		s--;
+	if (c == *s)
+		return ((char *)s);
+	return (0);
 }

@@ -6,12 +6,11 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 18:28:45 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/04 18:51:31 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/07 15:59:04 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static void	ft_isneg(int *n, int *neg, int *tmp)
 {

@@ -6,12 +6,11 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 00:21:16 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/04 18:46:11 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/07 16:00:53 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strdup(const char *s1)
 {
