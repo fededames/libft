@@ -6,7 +6,7 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 22:43:21 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/04 19:41:36 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/07 16:57:41 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	d = (char *)dst;
 	s = (char *)src;
+	if (dst == NULL && src == NULL)
+		return (dst);
 	while (i < n)
 	{
 		d[i] = s[i];

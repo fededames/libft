@@ -6,7 +6,7 @@
 #    By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/17 15:55:51 by fdamian-          #+#    #+#              #
-#    Updated: 2023/10/04 20:31:57 by fdamian-         ###   ########.fr        #
+#    Updated: 2023/10/07 17:37:05 by fdamian-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ FLAGS = -Wall -Wextra -Werror
 NAME = libft.a
 
 SRC = ft_atoi.c \
+	  ft_calloc.c \
 	  ft_bzero.c \
 	  ft_isalnum.c \
 	  ft_isalpha.c \
@@ -37,6 +38,7 @@ SRC = ft_atoi.c \
 	  ft_striteri.c \
 	  ft_strjoin.c \
 	  ft_strlcat.c \
+	  ft_strlcpy.c \
 	  ft_strlen.c \
 	  ft_strmapi.c \
 	  ft_strncmp.c \
@@ -55,8 +57,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 	@echo "$(NAME) created"
-	@ranlib $(NAME)
-	@echo "$(NAME) indexed"
 
 %.o: %.c
 	@gcc $(FLAGS) -c $< -o $@
