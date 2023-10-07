@@ -6,14 +6,14 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/17 19:42:30 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/04 18:52:14 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/07 13:53:40 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
-{	
+{
 	char	*p;
 
 	p = (char *)b;
