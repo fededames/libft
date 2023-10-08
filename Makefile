@@ -6,9 +6,13 @@
 #    By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/17 15:55:51 by fdamian-          #+#    #+#              #
-#    Updated: 2023/10/07 17:37:05 by fdamian-         ###   ########.fr        #
+#    Updated: 2023/10/08 14:50:34 by fdamian-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+#Colors
+DEF_COLOR = \033[0;39m
+GRAY = \033[0;90m
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -48,7 +52,13 @@ SRC = ft_atoi.c \
 	  ft_strtrim.c \
 	  ft_substr.c \
 	  ft_tolower.c \
-	  ft_toupper.c \
+	  ft_toupper.c
+
+BONUS_SRC =	ft_lstnew_bonus.c
+
+
+BONUS_OBJ = $(BONUS_SRC:.c=.o)
+
 
 OBJ = $(SRC:.c=.o)
 
@@ -70,5 +80,9 @@ fclean: clean
 	@echo "$(NAME) deleted"
 
 re: fclean all
+
+bonus: $(BONUS_OBJ)
+	@ar rc $(NAME) $(BONUS_OBJ)
+	@echo "$(GREEN)Libft bonus compiled!$(DEF_COLOR)"
 
 .PHONY: all, clean, fclean, re
