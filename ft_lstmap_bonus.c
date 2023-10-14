@@ -1,39 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/04 18:48:47 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/15 00:26:46 by fdamian-         ###   ########.fr       */
+/*   Created: 2023/10/14 23:34:46 by fdamian-          #+#    #+#             */
+/*   Updated: 2023/10/14 23:54:29 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	char	*ptr;
-	size_t	i;
+	t_list	*new;
+	t_list	*head;
 
-	if (!s)
+	if (lst == NULL)
 		return (NULL);
-	if (ft_strlen(s) < start)
+	new = ft_lstnew(f(lst->content));
+	if (new == NULL)
 	{
-		ptr = (char *) malloc (sizeof (char));
-		if (!ptr)
-			return (NULL);
-		*ptr = '\0';
-		return (ptr);
-	}
-	if (ft_strlen(s) - start > len)
-		i = len + 1;
-	else
-		i = ft_strlen(s) - start + 2;
-	ptr = (char *) malloc ((i) * sizeof (char));
-	if (!ptr)
+		free(new);
 		return (NULL);
-	ft_strlcpy(ptr, s + start, i);
-	return (ptr);
+	}
+	head = new;
+	lst = lst->next;
+	while (lst != NULL)
+	{
+		new->next = ft_lstnew(f(lst->content));
+		if (new == NULL)
+		{
+			ft_lstclear(&head, del);
+			return (NULL);
+		}
+		new = new->next;
+		lst = lst->next;
+	}
+	return (head);
 }

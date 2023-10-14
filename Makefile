@@ -6,7 +6,7 @@
 #    By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/17 15:55:51 by fdamian-          #+#    #+#              #
-#    Updated: 2023/10/08 14:50:34 by fdamian-         ###   ########.fr        #
+#    Updated: 2023/10/15 00:32:18 by fdamian-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,16 @@ SRC = ft_atoi.c \
 	  ft_tolower.c \
 	  ft_toupper.c
 
-BONUS_SRC =	ft_lstnew_bonus.c
+BONUS_SRC =	ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c
+
 
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
@@ -72,7 +81,7 @@ $(NAME): $(OBJ)
 	@gcc $(FLAGS) -c $< -o $@
 
 clean:
-	@rm -f $(OBJ)
+	@rm -f $(OBJ) $(BONUS_OBJ)
 	@echo "OBJ deleted"
 
 fclean: clean
