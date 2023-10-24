@@ -6,7 +6,7 @@
 #    By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/17 15:55:51 by fdamian-          #+#    #+#              #
-#    Updated: 2023/10/24 20:45:08 by fdamian-         ###   ########.fr        #
+#    Updated: 2023/10/24 20:49:27 by fdamian-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ BONUS_SRC =	ft_lstnew_bonus.c \
 			ft_lstadd_back_bonus.c \
 			ft_lstdelone_bonus.c \
 			ft_lstclear_bonus.c \
-			ft_lstiter_bonus.c \
+			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c
 
 
