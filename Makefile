@@ -6,13 +6,11 @@
 #    By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/17 15:55:51 by fdamian-          #+#    #+#              #
-#    Updated: 2023/10/24 20:49:27 by fdamian-         ###   ########.fr        #
+#    Updated: 2023/10/29 17:45:50 by fdamian-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #Colors
-DEF_COLOR = \033[0;39m
-GRAY = \033[0;90m
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -92,6 +90,6 @@ re: fclean all
 
 bonus: $(BONUS_OBJ)
 	@ar rc $(NAME) $(BONUS_OBJ)
-	@echo "$(GREEN)Libft bonus compiled!$(DEF_COLOR)"
+	@echo "Libft bonus compiled!"
 
-.PHONY: all, clean, fclean, re
+.PHONY: all clean fclean re bonus
