@@ -6,13 +6,13 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/04 18:48:47 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/24 21:10:41 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/31 21:01:44 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check_errors(char const *s, unsigned int start, size_t len)
+static int	ft_check_errors(char const *s, unsigned int start, size_t len)
 {
 	if (!s)
 		return (1);

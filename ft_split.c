@@ -6,13 +6,13 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 18:07:36 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/24 21:12:07 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/31 20:58:42 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memory_destroyer(char **splitted, int memory_counter)
+static void	*ft_memory_destroyer(char **splitted, int memory_counter)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ void	*ft_memory_destroyer(char **splitted, int memory_counter)
 	return (NULL);
 }
 
-size_t	ft_strqty(char *s, int c)
+static size_t	ft_strqty(char *s, int c)
 {
 	size_t	i;
 	size_t	s_len;
@@ -55,7 +55,7 @@ size_t	ft_strqty(char *s, int c)
 	return (substr_qty);
 }
 
-int	ft_offset(char *s, int c)
+static int	ft_offset(char *s, int c)
 {
 	int	i;
 

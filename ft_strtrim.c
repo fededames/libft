@@ -6,13 +6,13 @@
 /*   By: fdamian- < fdamian-@student.42malaga.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/30 01:09:40 by fdamian-          #+#    #+#             */
-/*   Updated: 2023/10/07 15:56:58 by fdamian-         ###   ########.fr       */
+/*   Updated: 2023/10/31 21:00:00 by fdamian-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_setcheck(char c, char const *set)
+static int	ft_setcheck(char c, char const *set)
 {
 	int	i;
 
